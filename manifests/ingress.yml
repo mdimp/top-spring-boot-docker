@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: "dimpy-a499"
+    labels:
+        app: "dimpy-a499"
+    annotations:
+        kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+    rules:
+        - host: dimpy9e00-dimpy-a499.2058cf28661f4f1384a9.centralindia.aksapp.io
+          http:
+            paths:
+            - path: /
+              backend:
+                serviceName: "dimpy-a499"
+                servicePort: 80
